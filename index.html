@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <h3>Prise de commande</h3>
+
+        <form id="myForm" action="ticket.html">
+            <div id="newDiv">
+                
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-4 "> Libellé</div>
+                        <div class="col-2 "> Référence</div>
+                        <div class="col-2 "> Quantity</div>
+                        <div class="col-1 "> PrixU</div>
+                        <div class="col-1 "> Prix </div>
+
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="col-4 ">
+                            <select class="custom-select " id="liste">
+                                <option selected disabled value="">Choose...</option>
+                                <option value="1">Le grand livre de JavaScript</option>
+                                <option value="2">HTML encore plus vite</option>
+                                <option value="3">Windows NT4.0</option>
+                                <option value="4">Le kit de Ressource technique de NT</option>
+                                <option value="5">Formation Java</option>
+                                <option value="6">Comment créer son site Web</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-2">
+                            <input class="form-control" value = "" type="text" placeholder="Références" readonly>
+                        </div>
+                        <div class="col-2">
+                            <input class="qt form-control" type="number" name="quantity" value="1" placeholder="Quantité" >
+                        </div>
+                        <div class="col-1">
+                            <input class="prU form-control " value = "0" type="text" id="prixU" placeholder="PrixU" readonly>
+                        </div>
+                        <div class="col-1">
+                            <input class="pr form-control" value = "0"  type="text" name="prix" placeholder="Prix" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input class="btn btn-primary" id="ajouterHtml" value = "+" type="button"></input>
+            
+            
+        </form>
+        <div class="total" >
+            
+            <span style="font-size: x-large;">Total : </span>  
+            <input class="total" value = "0"  type="text" id="total" placeholder="Total" readonly>
+        </div>
+    </div>
+        <script src="script.js"></script>
+    </body>
+    
+</html>
